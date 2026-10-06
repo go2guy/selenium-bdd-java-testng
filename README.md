@@ -24,7 +24,7 @@ Use Edge:
 ```sh
 mvn test -Dbrowser=edge
 ```
-Only run the smoke scenario (quote the entire argument in PowerShell):
+Only run the smoke scenario (quote the entire argument in PowerShell): you will need to uncomment the smoke section in login.feature
 ```sh
 mvn test "-Dcucumber.filter.tags=@smoke"
 ```
