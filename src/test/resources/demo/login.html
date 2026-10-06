@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>BDD Login Demo</title>
+<style>body{font-family:system-ui;max-width:420px;margin:60px auto}label,input,button{display:block;margin:12px 0}input{padding:8px}button{padding:10px 20px}#error{color:#b91c1c}[hidden]{display:none}</style></head>
+<body>
+<h1>Login demo</h1>
+<form id="login-form">
+<label for="username">Username</label><input id="username" autocomplete="username">
+<label for="password">Password</label><input id="password" type="password" autocomplete="current-password">
+<button id="login-button" type="submit">Log in</button>
+</form>
+<p id="error" role="alert" hidden></p>
+<section id="dashboard" hidden>Welcome, demo!</section>
+<script>
+document.getElementById('login-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const valid = document.getElementById('username').value === 'demo'
+    && document.getElementById('password').value === 'secret';
+  document.getElementById('error').hidden = valid;
+  document.getElementById('dashboard').hidden = !valid;
+  document.getElementById('error').textContent = valid ? '' : 'Invalid username or password';
+  this.hidden = valid;
+});
+</script>
+</body></html>
+

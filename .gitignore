@@ -1,0 +1,8 @@
+target/
+.idea/
+*.iml
+.github/
+chrome/
+chromedriver/
+chrome-win64/
+chromedriver-win64/
